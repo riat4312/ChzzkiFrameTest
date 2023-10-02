@@ -1,9 +1,8 @@
 * { font-family: sans-serif; }
 p { margin-top: 8px; margin-bottom: 8px; }
+
 .Now { text-align: center; }
+.littleX { font-size: 5pt; }
 
 #main0 { padding-top: 15px; }
-#NewButton {
-	font-size: 13pt;
-	padding-right: 3px;
-}
+#NewButton { font-size: 13pt; }
