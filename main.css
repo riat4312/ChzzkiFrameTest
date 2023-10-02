@@ -5,4 +5,5 @@ p { margin-top: 8px; margin-bottom: 8px; }
 #main0 { padding-top: 15px; }
 #NewButton {
 	font-size: 13pt;
+	padding-right: 3px;
 }
