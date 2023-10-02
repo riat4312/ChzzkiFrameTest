@@ -1,20 +1,27 @@
 let Money = 0;
 let Workers = 0;
+let WorkSpeed = 100;
+let TickSpeed = 1000;
 let Money_display = document.getElementById("MoneyX");
 let Worker_display = document.getElementById("WorkerX");
+let WorkSpeed_display = document.getElementById("WorkSpeedX");
 
 function Display() {
 	Money_display.textContent = Money;
 	Worker_display.textContent = Workers;
+	WorkSpeed_display.textContent = WorkerSpeed;
 }
 
 function WorkingClick() { Money = Money + 100; }
 function HiringClick() { Workers = Workers + 1; }
 
-function MoneyUpdate() {
-	Money = Money + Workers * 10;
-	/*document.getElementById("Num1").textContent = money;*/
+function WorkSpeedUpdate() {
+	WorkSpeed = WorkSpeed * 1.1;
+	TickSpeed = TickSpeed / 1.1;
 }
 
+function MoneyUpdate() { Money = Money + Workers * 10; }
+
 setInterval(Display, 10);
-setInterval(MoneyUpdate, 100);
+setInterval(WorkSpeedUpdate, 10);
+setInterval(MoneyUpdate, TickSpeed);
