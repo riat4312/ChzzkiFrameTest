@@ -3,17 +3,29 @@
 	<head>
 		<link rel="stylesheet" href="main.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>riat4312 Idle Game</title>
+		<title>Test Web Game</title>
 	</head>
 	<body>
-		<div style="width:10px;height:10px;text-align:center;">&nbsp;</div>
-		<h3 class="Now">당신의 보유 금액은 <span id="MoneyX">0</span> 원입니다.</h3>
-		<p>효율 : <span id="WorkSpeedX">100</span>%</p>
-		<p>일꾼 수 : <span id="WorkerX">0</span></p>
-		<button id="NewButton" onclick="WorkingClick()">직접 일하기</button>
-		<button id="NewButton" onclick="HiringClick()">일꾼 고용하기</button>
+		<h3 id="main0">당신의 보유 금액은 <span id="MoneyX">0</span>원입니다.</h3>
 		<p>&nbsp;</p>
-		<button id="NewButton" onclick="WorkSpeedUpdate()">효율 올리기</button>
+		<p>
+			<button onclick="BasicClick()">직접 일하기</button>
+			<!--&nbsp;&nbsp;&nbsp;
+			<button onclick="ResetClick()">리셋</button>-->
+		</p>
+		<p>&nbsp;</p>
+		<p>
+			<button onclick="WorkerClick()">일꾼 고용하기</button>
+			&nbsp;&nbsp;&nbsp;일꾼 수 : <span id="WorkerX">0</span>
+		</p>
+		<p>
+			<button onclick="MachineClick()">자동 고용 시스템</button>
+			&nbsp;&nbsp;&nbsp;기계 수 : <span id="MachineX">0</span>
+		</p>
+		<p>
+			<button onclick="iGrowthClick()">무한 증식</button>
+			&nbsp;&nbsp;&nbsp;무한 증식 레벨 : <span id="iGrowthX">0</span>
+		</p>
 	</body>
 	<script src="main.js"></script>
 </html>
