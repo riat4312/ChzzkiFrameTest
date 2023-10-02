@@ -11,19 +11,15 @@ function Display() {
 	Worker_display.textContent = Workers;
 	WorkSpeed_display.textContent = WorkerSpeed;
 }
-
 function WorkingClick() { Money = Money + 100; }
 function HiringClick() { Workers = Workers + 1; }
-
 function MoneyUpdate() { Money = Money + Workers * 10; }
 
 function WorkSpeedUpdate() {
-	let Tick = setInterval(MoneyUpdate, TickSpeed);
-	clearInterval(Tick);
 	WorkSpeed = WorkSpeed * 1.1;
 	TickSpeed = TickSpeed * 0.9;
-	setInterval(MoneyUpdate, TickSpeed);
-}
 
+}
 setInterval(Display, 10);
+setInterval(MoneyUpdate, Math.round(1000 / (Workers) ^ 1.1));
 
