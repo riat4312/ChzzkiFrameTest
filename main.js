@@ -23,4 +23,4 @@ function WorkSpeedUpdate() {
 function MoneyUpdate() { Money = Money + Workers * 10; }
 
 setInterval(Display, 10);
-setInterval(MoneyUpdate, TickSpeed);
+setInterval(MoneyUpdate, Number(TickSpeed));
