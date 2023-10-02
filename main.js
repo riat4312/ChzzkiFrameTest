@@ -14,7 +14,7 @@ function Display() {
 function BasicClick() { Money = Money + 100; }
 function WorkerClick() { Workers = Workers + 1; }
 function MachineClick() { Machine = Machine + 1; }
-function infGrowthClick() { infGrowth = iGrowth + 1; }
+function iGrowthClick() { infGrowth = iGrowth + 1; }
 
 function MoneyUpdate() {
 	Money = Money + Workers * 10;
