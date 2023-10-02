@@ -1,7 +1,6 @@
 * { font-family: sans-serif; }
-p { margin-top: 10px; margin-bottom: 10px; }
-
-.Now { text-align: center; }
+p { margin-top: 8px; margin-bottom: 8px; }
+h1, h2, h3, h4, h5 { text-align: center; }
 
 #main0 { padding-top: 15px; }
-#NewButton { font-size: 13pt; }
+button { font-size: 13pt; }
