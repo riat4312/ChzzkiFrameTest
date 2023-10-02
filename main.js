@@ -1,25 +1,29 @@
-let Money = 0;
-let Workers = 0;
-let WorkSpeed = 100;
-let TickSpeed = 1000;
+let Money = 0; let Workers = 0; let Machine = 0; let iGrowth = 0;
 let Money_display = document.getElementById("MoneyX");
 let Worker_display = document.getElementById("WorkerX");
-let WorkSpeed_display = document.getElementById("WorkSpeedX");
+let Machine_display = document.getElementById("MachineX");
+let iGrowth_display = document.getElementById("iGrowthX");
 
 function Display() {
-	Money_display.textContent = Money;
-	Worker_display.textContent = Workers;
-	WorkSpeed_display.textContent = WorkerSpeed;
+	Money_display.textContent = Money.toLocaleString('ko');
+	Worker_display.textContent = Workers.toLocaleString('ko');
+	Machine_display.textContent = Machine.toLocaleString('ko');
+	iGrowth_display.textContent = iGrowth.toLocaleString('ko');
 }
-function WorkingClick() { Money = Money + 100; }
-function HiringClick() { Workers = Workers + 1; }
-function MoneyUpdate() { Money = Money + Workers * 10; }
 
-function WorkSpeedUpdate() {
-	WorkSpeed = WorkSpeed * 1.1;
-	TickSpeed = TickSpeed * 0.9;
+function BasicClick() { Money = Money + 100; }
+function WorkerClick() { Workers = Workers + 1; }
+function MachineClick() { Machine = Machine + 1; }
+function iGrowthClick() { iGrowth = iGrowth + 1; }
 
+function MoneyUpdate() {
+	Money = Money + Workers * 10;
+	/*if ( Money >= 1000000000000 ) { Money = 1000000000000; };*/
 }
+function EmployUpdate() { Workers = Workers + Machine; }
+function iGrowthUpdate() { Machine = Machine + iGrowth; }
+
 setInterval(Display, 10);
-setInterval(MoneyUpdate, Math.round(1000 / (Workers) ^ 1.1));
-
+setInterval(MoneyUpdate, 100);
+setInterval(EmployUpdate, 100);
+setInterval(iGrowthUpdate, 100);
