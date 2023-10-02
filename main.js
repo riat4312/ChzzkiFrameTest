@@ -1,7 +1,7 @@
-var Money = 0;
-var Workers = 0;
-var Money_display = document.getElementById("MoneyX");
-var Worker_display = document.getElementById("WorkerX");
+let Money = 0;
+let Workers = 0;
+let Money_display = document.getElementById("MoneyX");
+let Worker_display = document.getElementById("WorkerX");
 
 function Display() {
 	Money_display.textContent = Money;
