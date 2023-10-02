@@ -1,8 +1,8 @@
-let Money = 0; let Workers = 0; let Machine = 0; let iGrowth = 0;
+let iGrowth = 0; let Money = 0; let Workers = 0; let Machine = 0;
 let Money_display = document.getElementById("MoneyX");
 let Worker_display = document.getElementById("WorkerX");
 let Machine_display = document.getElementById("MachineX");
-let infGrowth_display = document.getElementById("infGrowthX");
+let iGrowth_display = document.getElementById("iGrowthX");
 
 function Display() {
 	Money_display.textContent = Money.toLocaleString('ko');
@@ -14,14 +14,14 @@ function Display() {
 function BasicClick() { Money = Money + 100; }
 function WorkerClick() { Workers = Workers + 1; }
 function MachineClick() { Machine = Machine + 1; }
-function iGrowthClick() { infGrowth = iGrowth + 1; }
+function iGrowthClick() { iGrowth = iGrowth + 1; }
 
 function MoneyUpdate() {
 	Money = Money + Workers * 10;
 	/*if ( Money >= 1000000000000 ) { Money = 1000000000000; };*/
 }
 function EmployUpdate() { Workers = Workers + Machine; }
-function iGrowthUpdate() { Machine = Machine + infGrowth; }
+function iGrowthUpdate() { Machine = Machine + iGrowth; }
 
 setInterval(Display, 10);
 setInterval(MoneyUpdate, 100);
