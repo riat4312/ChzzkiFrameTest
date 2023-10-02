@@ -19,9 +19,9 @@ function MoneyUpdate() { Money = Money + Workers * 10; }
 
 function WorkSpeedUpdate() {
 	let Tick = setInterval(MoneyUpdate, TickSpeed);
+	clearInterval(Tick);
 	WorkSpeed = WorkSpeed * 1.1;
 	TickSpeed = TickSpeed * 0.9;
-	clearInterval(Tick);
 	setInterval(MoneyUpdate, TickSpeed);
 }
 
