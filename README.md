@@ -2,4 +2,4 @@
 
 Korean only supported
 
-https://riat4312.github.io/TestWebGame/
+https://riat4312.github.io/ChzzkiFrameTest/
